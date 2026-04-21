@@ -1,7 +1,3 @@
-Here’s a clean, **portfolio-ready README.md** for your Smart Task Manager. You can directly place this in your project root.
-
----
-
 # 📌 Smart Task Manager
 
 A full-stack role-based task management system built using **PHP, MySQL, HTML, CSS, and JavaScript**.
