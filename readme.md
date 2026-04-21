@@ -155,16 +155,6 @@ UPDATE users SET role = 'admin' WHERE id = 1;
 
 ---
 
-# 📸 Screenshots (Optional Section)
-
-Add screenshots here:
-
-* Login Page
-* Dashboard
-* Admin Panel
-
----
-
 # 🎯 Learning Outcomes
 
 This project demonstrates:
