@@ -1,0 +1,279 @@
+:root {
+  --primary: #631118;
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #333;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+* {
+  transition: all 0.2s ease;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #631118, #4a0d12);
+  color: white;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  gap: 10px;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.15);
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s ease;
+  opacity: 0.85;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.sidebar a.active {
+  background: rgba(255, 255, 255, 0.18);
+  opacity: 1;
+  font-weight: 600;
+}
+
+.menu-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+/* GENERAL */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  margin: 0;
+  color: var(--text);
+}
+
+.main {
+  flex: 1;
+  min-width: 0; /* 🔥 prevents overflow issues */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* INPUT BOX */
+.input-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-box button {
+  padding: 10px 15px;
+  background: #631118;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* TASK CONTAINER */
+.task-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* TASK CARD */
+.task {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.task:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* STATUS BADGE */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* BUTTONS */
+.task button {
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.done-btn {
+  background: #28a745;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stats div {
+  background: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  font-weight: bold;
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* AUTH PAGE LAYOUT */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* FORM */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: #631118;
+}
+
+/* BUTTON */
+.auth-form button {
+  padding: 12px;
+  background: #631118;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-form button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* SWITCH TEXT */
+.switch {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #631118;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* LOGOUT */
+.logout {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #631118;
+  text-decoration: none;
+}
