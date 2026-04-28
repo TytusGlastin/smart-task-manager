@@ -6,6 +6,10 @@ if (isset($_SESSION['user_id'])) {
   header("Location: dashboard.php");
   exit;
 }
+
+if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +28,8 @@ if (isset($_SESSION['user_id'])) {
   <form action="../api/auth.php" method="POST" class="auth-form">
 
     <input type="hidden" name="action" value="register">
+
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
     <input 
       type="text" 
